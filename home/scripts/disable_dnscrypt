@@ -1,0 +1,4 @@
+#!/bin/sh
+sed -i 's|dns=none|#dns=none|g' /etc/NetworkManager/NetworkManager.conf
+sed -i 's|rc-manager=unmanaged|#rc-manager=unmanaged|g' /etc/NetworkManager/NetworkManager.conf
+service NetworkManager restart

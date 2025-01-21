@@ -1,0 +1,16 @@
+#!/bin/sh
+
+BACKUP_TARGET="/media/tmp/$(date -Iseconds)/"
+HOME_SOURCE="/home/user/"
+HOME_LEN="$(echo "$HOME_SOURCE" | wc -m)"
+
+echo "backup_target: $BACKUP_TARGET"
+echo "home_source  : $HOME_SOURCE"
+
+find	"$HOME_SOURCE/scripts/" \
+	"$HOME_SOURCE/.gitconfig"   \
+	"$HOME_SOURCE/.ssh"         \
+	"$HOME_SOURCE/KeepassXC"    \
+ \( \
+	-type f -printf 'cp '"'%p'"' '"'$BACKUP_TARGET'"'"$(echo %p |cut -c'"$HOME_LEN"'-)"\n' -o \
+	-type d -printf 'mkdir -p '"'$BACKUP_TARGET'"'"$(echo %p |cut -c'"$HOME_LEN"'-)"\n' \) | sh
