@@ -7,7 +7,8 @@ apt update -y && apt upgrade -y
 # light                : backlight management
 # lightdm              : light display manager (prompt for login/pass)
 apt install -y i3 network-manager network-manager-gnome light \
-               pulseaudio-utils xorg lightdm xclip maim xfce4-terminal
+               pulseaudio-utils xorg lightdm xclip maim       \
+               xfce4-terminal alsa-utils pulseaudio
 
 # need to setuid light so we can change brightness in i3
 chmod ug+s /usr/bin/light
@@ -16,7 +17,7 @@ chmod ug+s /usr/bin/light
 apt install -y firefox-esr thunar mpv feh
 
 # set up my shell
-apt install -y zsh figlet lolcat
+apt install -y zsh figlet lolcat git
 
 # get user information
 USER_PASSWD="$(getent passwd 1000)"
@@ -33,6 +34,9 @@ apt install passwd
 chsh --shell /usr/bin/zsh "$USER_NAME"
 
 # !!FILE_SETUP!!
+
+# set home owner
+chown -R "$USER_UID:$USER_GID" "$USER_HOME"
 
 # reboot
 systemctl reboot
