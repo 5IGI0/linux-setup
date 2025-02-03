@@ -8,7 +8,7 @@ apt update -y && apt upgrade -y
 # lightdm              : light display manager (prompt for login/pass)
 apt install -y i3 network-manager network-manager-gnome light \
                pulseaudio-utils xorg lightdm xclip maim       \
-               xfce4-terminal alsa-utils pulseaudio
+               xfce4-terminal alsa-utils pulseaudio rofi
 
 # need to setuid light so we can change brightness in i3
 chmod ug+s /usr/bin/light
