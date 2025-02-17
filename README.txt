@@ -5,10 +5,10 @@ by running "compile.py" you will get an "install.sh"
 that you just need to run to setup everything.
 
 ==== TODO for better setup ====
-[ ] Switch to Wayland
+[X] Switch to Wayland
 [ ] KeepassXC (flatpak vs appimage?)
-[ ] VSCodium (flatpak vs db?)
-[ ] Firefox (flatpak)
+[ ] VSCodium (flatpak vs deb?)
+[X] Firefox (flatpak)
   [ ] List every addons i need
 [ ] Sandbox Exploit-Prone Programs (mpv, ...)
 [ ] Automated Cache-Cleaning

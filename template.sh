@@ -2,22 +2,25 @@
 
 apt update -y && apt upgrade -y
 
-# i3 + every packages i need for my config to work
-# network-manager-gnome: menu to select networks (nm-applet)
-# light                : backlight management
+# sway + every packages i need for my config to work
 # lightdm              : light display manager (prompt for login/pass)
-apt install -y i3 network-manager network-manager-gnome light \
-               pulseaudio-utils xorg lightdm xclip maim       \
-               xfce4-terminal alsa-utils pulseaudio rofi
+apt install -y sway xwayland network-manager \
+               pulseaudio-utils xclip maim lightdm pipewire xdg-desktop-portal xdg-desktop-portal-gtk xdg-desktop-portal-wlr \
+               xfce4-terminal alsa-utils pulseaudio rofi brightnessctl
 
-# need to setuid light so we can change brightness in i3
-chmod ug+s /usr/bin/light
+# flatpaks
+apt install -y flatpak
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+flatpak install -y flathub org.mozilla.firefox
 
 # programs i need (UI)
-apt install -y firefox-esr thunar mpv feh
+apt install -y thunar mpv feh
 
 # set up my shell
-apt install -y zsh figlet lolcat git
+apt install -y zsh figlet lolcat
+
+# dev tools
+apt install -y git python3 python3-pip pipenv gcc
 
 # get user information
 USER_PASSWD="$(getent passwd 1000)"
