@@ -1,0 +1,6 @@
+https://addons.mozilla.org/fr/firefox/addon/ublock-origin/
+https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/
+
+=== userscripts ===
+
+https://greasyfork.org/en/scripts/23772-absolute-enable-right-click-copy

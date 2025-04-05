@@ -1,0 +1,4 @@
+
+1. make NetworkManager manage WAN
+  a. edit /etc/network/interfaces
+  b. remove every directives about WAN

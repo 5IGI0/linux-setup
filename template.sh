@@ -6,7 +6,7 @@ apt update -y && apt upgrade -y
 # lightdm              : light display manager (prompt for login/pass)
 apt install -y sway xwayland network-manager \
                pulseaudio-utils xclip maim lightdm pipewire xdg-desktop-portal xdg-desktop-portal-gtk xdg-desktop-portal-wlr \
-               xfce4-terminal alsa-utils pulseaudio rofi brightnessctl
+               xfce4-terminal alsa-utils pulseaudio rofi brightnessctl grim tumbler-plugins-extra
 
 # flatpaks
 apt install -y flatpak

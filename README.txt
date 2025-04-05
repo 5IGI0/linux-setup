@@ -9,7 +9,8 @@ that you just need to run to setup everything.
 [ ] KeepassXC (flatpak vs appimage?)
 [ ] VSCodium (flatpak vs deb?)
 [X] Firefox (flatpak)
-  [ ] List every addons i need
+  [X] List every addons i need
+  [ ] auto-install
 [ ] Sandbox Exploit-Prone Programs (mpv, ...)
 [ ] Automated Cache-Cleaning
 [ ] Automated Backups
