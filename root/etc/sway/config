@@ -223,7 +223,8 @@ bar {
 
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
-    status_command while date +'%Y-%m-%d %H:%M:%S'; do sleep 1; done
+    status_command i3status
+    # while date +'%Y-%m-%d %H:%M:%S'; do sleep 1; done
 
     colors {
         statusline #ffffff
@@ -247,6 +248,10 @@ exec hash dbus-update-activation-environment 2>/dev/null \
 # so you should use nmtui to configure properly the network.
 # however if one day it is supposed, the package is: network-manager-gnome
 # exec nm-applet
+
+# window conf
+for_window [app_id="firefox" title="Picture-in-Picture"] floating enable
+for_window [app_id="LibreWolf" title="Picture-in-Picture"] floating enable
 
 # title bars
 font pango:monospace 8
