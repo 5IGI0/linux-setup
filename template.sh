@@ -11,7 +11,7 @@ apt install -y sway xwayland network-manager \
 # flatpaks
 apt install -y flatpak
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-flatpak install -y flathub org.mozilla.firefox
+flatpak install -y flathub io.gitlab.librewolf-community
 
 # programs i need (UI)
 apt install -y thunar mpv feh
